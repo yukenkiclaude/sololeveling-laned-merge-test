@@ -1,0 +1,15 @@
+name: Lane D synthetic check
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  lane-d-synthetic-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify synthetic fixture
+        run: |
+          printf 'Lane D synthetic fixture only\n'
